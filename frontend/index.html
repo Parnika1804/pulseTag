@@ -8,8 +8,73 @@
 </head>
 <body>
 
-    <!-- screens will go here in the next steps -->
+    <!-- Screen 1: Language Selection -->
+    <div id="language-screen" class="screen">
+        <h1 data-i18n="chooseLanguage">Choose your language</h1>
+        <div class="lang-buttons">
+            <button class="lang-btn" data-lang="hi">हिन्दी</button>
+            <button class="lang-btn" data-lang="en">English</button>
+            <button class="lang-btn" data-lang="ta">தமிழ்</button>
+            <button class="lang-btn" data-lang="bn">বাংলা</button>
+            <button class="lang-btn" data-lang="mr">मराठी</button>
+            <button class="lang-btn" data-lang="te">తెలుగు</button>
+            <button class="lang-btn" data-lang="gu">ગુજરાતી</button>
+            <button class="lang-btn" data-lang="pa">ਪੰਜਾਬੀ</button>
+        </div>
+    </div>
 
+    <!-- Screen 2: Onboarding (Aadhaar + OTP) -->
+    <div id="onboarding-screen" class="screen hidden">
+        <h1>PulseTag</h1>
+        <p data-i18n="onboardingIntro">Don't have an ABHA ID? Let's create one.</p>
+
+        <label for="aadhaar-input" data-i18n="aadhaarLabel">Aadhaar Number</label>
+        <input type="text" id="aadhaar-input" data-i18n-placeholder="aadhaarPlaceholder" placeholder="Enter Aadhaar number">
+
+        <button id="send-otp-btn" data-i18n="sendOtpBtn">Send OTP</button>
+
+        <div id="otp-section" class="hidden">
+            <label for="otp-input" data-i18n="otpLabel">Enter OTP</label>
+            <input type="text" id="otp-input" data-i18n-placeholder="otpPlaceholder" placeholder="Enter OTP">
+            <button id="verify-otp-btn" data-i18n="verifyBtn">Verify</button>
+        </div>
+
+        <p id="otp-success-msg" class="hidden success-text" data-i18n="otpSuccessMsg">ABHA ID created</p>
+    </div>
+
+    <!-- Screen 3: Profile Form -->
+    <div id="profile-form" class="screen hidden">
+        <h1 data-i18n="profileTitle">Emergency Profile</h1>
+
+        <label for="name-input" data-i18n="nameLabel">Name</label>
+        <input type="text" id="name-input" data-i18n-placeholder="namePlaceholder" placeholder="Full name">
+
+        <label for="blood-group-input" data-i18n="bloodGroupLabel">Blood Group</label>
+        <select id="blood-group-input">
+            <option value="" data-i18n="bloodGroupPlaceholder">Select blood group</option>
+            <option value="A+">A+</option>
+            <option value="A-">A-</option>
+            <option value="B+">B+</option>
+            <option value="B-">B-</option>
+            <option value="O+">O+</option>
+            <option value="O-">O-</option>
+            <option value="AB+">AB+</option>
+            <option value="AB-">AB-</option>
+        </select>
+
+        <label for="allergies-input" data-i18n="allergiesLabel">Allergies</label>
+        <input type="text" id="allergies-input" data-i18n-placeholder="allergiesPlaceholder" placeholder="e.g. Penicillin, Peanuts">
+
+        <label for="conditions-input" data-i18n="conditionsLabel">Conditions</label>
+        <input type="text" id="conditions-input" data-i18n-placeholder="conditionsPlaceholder" placeholder="e.g. Diabetes">
+
+        <label for="medications-input" data-i18n="medicationsLabel">Medications</label>
+        <input type="text" id="medications-input" data-i18n-placeholder="medicationsPlaceholder" placeholder="e.g. Metformin 500mg">
+
+        <button id="save-profile-btn" data-i18n="saveBtn">Save</button>
+    </div>
+
+    <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
