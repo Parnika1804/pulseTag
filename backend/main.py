@@ -53,3 +53,32 @@ def save_profile(data: ProfileRequest, db: Session = Depends(get_db)):
     db.commit()
     db.refresh(new_user)
     return {"id": new_user.id}
+
+from fastapi import HTTPException
+
+@app.get("/emergency/{user_id}")
+def get_emergency_info(user_id: int, db: Session = Depends(get_db)):
+    user = db.query(models.User).filter(models.User.id == user_id).first()
+    if user is None:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {
+        "name": user.name,
+        "blood_group": user.blood_group,
+        "allergies": user.allergies,
+        "conditions": user.conditions,
+        "medications": user.medications,
+    }
+
+import os
+import shutil
+from fastapi import UploadFile, File
+
+UPLOAD_DIR = "uploads"
+os.makedirs(UPLOAD_DIR, exist_ok=True)
+
+@app.post("/upload/{user_id}")
+def upload_document(user_id: int, file: UploadFile = File(...)):
+    file_path = os.path.join(UPLOAD_DIR, f"{user_id}_{file.filename}")
+    with open(file_path, "wb") as buffer:
+        shutil.copyfileobj(file.file, buffer)
+    return {"filename": file.filename, "path": file_path}
