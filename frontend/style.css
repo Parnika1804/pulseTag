@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    background: #f5f7fa;
+    display: flex;
+    justify-content: center;
+}
+
+.screen {
+    background: #ffffff;
+    max-width: 420px;
+    width: 100%;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    margin-top: 40px;
+}
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    margin-top: 0;
+    color: #1a2b4c;
+}
+
+.lang-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: 16px;
+}
+
+.lang-btn {
+    padding: 12px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #f0f4ff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.lang-btn:hover {
+    background: #dce6ff;
+}
+
+label {
+    display: block;
+    margin-top: 14px;
+    margin-bottom: 6px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+button#send-otp-btn,
+button#verify-otp-btn,
+button#save-profile-btn {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button#send-otp-btn:hover,
+button#verify-otp-btn:hover,
+button#save-profile-btn:hover {
+    background: #1d4ed8;
+}
+
+.success-text {
+    color: #16a34a;
+    font-weight: bold;
+    margin-top: 16px;
+}
+
+/* ---------- Emergency Info Card (emergency.html) ---------- */
+#emergency-card {
+    padding: 0;
+    overflow: hidden;
+    max-width: 460px;
+}
+
+.emergency-header {
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.emergency-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.emergency-row:last-child {
+    border-bottom: none;
+}
+
+.emergency-label {
+    font-weight: bold;
+    color: #555;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emergency-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    text-align: right;
+}
+
+/* Blood group: the single most urgent fact, shown first and biggest */
+.emergency-blood {
+    background: #fef2f2;
+    padding: 22px 24px;
+}
+
+.emergency-blood-value {
+    font-size: 34px;
+    font-weight: 800;
+    color: #dc2626;
+}
+
+/* Allergies: flagged as a warning since it can be life-threatening */
+.emergency-warning {
+    background: #fffbeb;
+}
+
+.emergency-warning-value {
+    color: #b45309;
+    font-weight: 700;
+}
+
+#loading-message, #error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* ---------- QR code section (index.html profile form) ---------- */
+#qr-section {
+    margin-top: 24px;
+    text-align: center;
+}
+
+#qr-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#qr-canvas {
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 8px;
+}
