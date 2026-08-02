@@ -165,6 +165,165 @@ button#save-profile-btn:hover {
     color: #555;
 }
 
+/* ---------- Alert sent message (emergency.html) ---------- */
+#alert-sent-message {
+    max-width: 460px;
+    margin: 16px auto 0;
+    background: #ecfdf5;
+    color: #047857;
+    font-weight: bold;
+    text-align: center;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* ---------- Consent log section (emergency.html) ---------- */
+#consent-log-section {
+    max-width: 460px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+#view-consent-log-btn {
+    padding: 10px 18px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #f0f4ff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#view-consent-log-btn:hover {
+    background: #dce6ff;
+}
+
+#consent-log-list {
+    background: #ffffff;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 16px;
+    text-align: left;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+}
+
+#consent-log-list h3 {
+    margin-top: 0;
+    font-size: 15px;
+    color: #1a2b4c;
+}
+
+.consent-log-row {
+    font-size: 13px;
+    color: #444;
+    padding: 6px 0;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.consent-log-row:last-child {
+    border-bottom: none;
+}
+
+/* ---------- Request Full Medical History (emergency.html) ---------- */
+#full-history-section {
+    max-width: 460px;
+    margin: 16px auto 0;
+    text-align: center;
+}
+
+#request-full-history-btn {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    background: #7c3aed;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#request-full-history-btn:hover {
+    background: #6d28d9;
+}
+
+#full-history-result {
+    max-width: 460px;
+    margin: 12px auto 0;
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 14px;
+    font-size: 14px;
+    color: #333;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+    text-align: center;
+}
+
+/* Consent confirmation modal */
+#consent-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#consent-modal {
+    background: white;
+    max-width: 380px;
+    width: 90%;
+    padding: 24px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+#consent-modal h3 {
+    margin-top: 0;
+    color: #1a2b4c;
+}
+
+#consent-modal p {
+    font-size: 14px;
+    color: #555;
+}
+
+.consent-modal-buttons {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.consent-modal-buttons button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    border: none;
+}
+
+#consent-cancel-btn {
+    background: #f0f0f0;
+    color: #333;
+}
+
+#consent-cancel-btn:hover {
+    background: #e0e0e0;
+}
+
+#consent-confirm-btn {
+    background: #7c3aed;
+    color: white;
+}
+
+#consent-confirm-btn:hover {
+    background: #6d28d9;
+}
+
 /* ---------- QR code section (index.html profile form) ---------- */
 #qr-section {
     margin-top: 24px;
@@ -180,4 +339,48 @@ button#save-profile-btn:hover {
     border: 1px solid #d0d5dd;
     border-radius: 8px;
     padding: 8px;
+}
+
+/* ---------- Access log section (index.html profile form) ---------- */
+#access-log-section {
+    margin-top: 24px;
+    text-align: center;
+}
+
+#view-access-log-btn {
+    padding: 10px 18px;
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    background: #f0f4ff;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#view-access-log-btn:hover {
+    background: #dce6ff;
+}
+
+#access-log-list {
+    background: #f9fafb;
+    border-radius: 8px;
+    margin-top: 12px;
+    padding: 16px;
+    text-align: left;
+}
+
+#access-log-list h3 {
+    margin-top: 0;
+    font-size: 15px;
+    color: #1a2b4c;
+}
+
+.access-log-row {
+    font-size: 13px;
+    color: #444;
+    padding: 6px 0;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.access-log-row:last-child {
+    border-bottom: none;
 }

@@ -80,6 +80,15 @@
             <p data-i18n="qrReadyMsg">Your QR code is ready:</p>
             <canvas id="qr-canvas"></canvas>
         </div>
+
+        <div id="access-log-section" class="hidden">
+            <button id="view-access-log-btn" data-i18n="viewAccessLogBtn">View My Access Log</button>
+
+            <div id="access-log-list" class="hidden">
+                <h3 data-i18n="accessLogTitle">Who Accessed My Record</h3>
+                <div id="access-log-entries"></div>
+            </div>
+        </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>

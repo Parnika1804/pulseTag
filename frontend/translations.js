@@ -29,7 +29,17 @@ const translations = {
         emergencyInfoTitle: "EMERGENCY INFO",
         emergencyContactLabel: "Emergency Contact",
         loadingMsg: "Loading...",
-        notFoundMsg: "No record found."
+        notFoundMsg: "No record found.",
+        alertSentMsg: "Alert sent to emergency contact",
+        viewConsentLogBtn: "View Consent Log",
+        consentLogTitle: "Access History",
+        requestFullHistoryBtn: "Request Full Medical History",
+        consentModalTitle: "Request Full Medical History?",
+        consentModalBody: "This will request the patient's consent to view their complete medical records and documents, beyond the basic emergency info.",
+        consentCancelBtn: "Cancel",
+        consentConfirmBtn: "Confirm Request",
+        viewAccessLogBtn: "View My Access Log",
+        accessLogTitle: "Who Accessed My Record"
     },
     hi: {
         chooseLanguage: "अपनी भाषा चुनें",
@@ -58,7 +68,17 @@ const translations = {
         emergencyInfoTitle: "आपातकालीन जानकारी",
         emergencyContactLabel: "आपातकालीन संपर्क",
         loadingMsg: "लोड हो रहा है...",
-        notFoundMsg: "कोई रिकॉर्ड नहीं मिला।"
+        notFoundMsg: "कोई रिकॉर्ड नहीं मिला।",
+        alertSentMsg: "आपातकालीन संपर्क को सूचना भेज दी गई",
+        viewConsentLogBtn: "सहमति लॉग देखें",
+        consentLogTitle: "एक्सेस इतिहास",
+        requestFullHistoryBtn: "पूर्ण चिकित्सा इतिहास का अनुरोध करें",
+        consentModalTitle: "पूर्ण चिकित्सा इतिहास का अनुरोध करें?",
+        consentModalBody: "इससे मरीज़ की पूरी मेडिकल जानकारी और दस्तावेज़ देखने के लिए सहमति मांगी जाएगी।",
+        consentCancelBtn: "रद्द करें",
+        consentConfirmBtn: "अनुरोध की पुष्टि करें",
+        viewAccessLogBtn: "मेरा एक्सेस लॉग देखें",
+        accessLogTitle: "मेरा रिकॉर्ड किसने देखा"
     },
     ta: {
         chooseLanguage: "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
@@ -87,7 +107,17 @@ const translations = {
         emergencyInfoTitle: "அவசர தகவல்",
         emergencyContactLabel: "அவசர தொடர்பு",
         loadingMsg: "ஏற்றுகிறது...",
-        notFoundMsg: "பதிவு எதுவும் இல்லை."
+        notFoundMsg: "பதிவு எதுவும் இல்லை.",
+        alertSentMsg: "அவசர தொடர்புக்கு எச்சரிக்கை அனுப்பப்பட்டது",
+        viewConsentLogBtn: "ஒப்புதல் பதிவைப் பார்க்கவும்",
+        consentLogTitle: "அணுகல் வரலாறு",
+        requestFullHistoryBtn: "முழு மருத்துவ வரலாற்றைக் கோருங்கள்",
+        consentModalTitle: "முழு மருத்துவ வரலாற்றைக் கோர வேண்டுமா?",
+        consentModalBody: "இது நோயாளியின் முழுமையான மருத்துவ பதிவுகளையும் ஆவணங்களையும் பார்க்க ஒப்புதலைக் கோரும்.",
+        consentCancelBtn: "ரத்து செய்",
+        consentConfirmBtn: "கோரிக்கையை உறுதிப்படுத்து",
+        viewAccessLogBtn: "எனது அணுகல் பதிவைப் பார்க்கவும்",
+        accessLogTitle: "எனது பதிவை யார் அணுகினர்"
     },
     bn: {
         chooseLanguage: "আপনার ভাষা নির্বাচন করুন",
@@ -116,7 +146,17 @@ const translations = {
         emergencyInfoTitle: "জরুরি তথ্য",
         emergencyContactLabel: "জরুরি যোগাযোগ",
         loadingMsg: "লোড হচ্ছে...",
-        notFoundMsg: "কোনো রেকর্ড পাওয়া যায়নি।"
+        notFoundMsg: "কোনো রেকর্ড পাওয়া যায়নি।",
+        alertSentMsg: "জরুরি যোগাযোগে সতর্কতা পাঠানো হয়েছে",
+        viewConsentLogBtn: "সম্মতি লগ দেখুন",
+        consentLogTitle: "অ্যাক্সেস ইতিহাস",
+        requestFullHistoryBtn: "সম্পূর্ণ মেডিকেল ইতিহাস অনুরোধ করুন",
+        consentModalTitle: "সম্পূর্ণ মেডিকেল ইতিহাস অনুরোধ করবেন?",
+        consentModalBody: "এটি রোগীর সম্পূর্ণ মেডিকেল রেকর্ড ও ডকুমেন্ট দেখার জন্য সম্মতি চাইবে।",
+        consentCancelBtn: "বাতিল করুন",
+        consentConfirmBtn: "অনুরোধ নিশ্চিত করুন",
+        viewAccessLogBtn: "আমার অ্যাক্সেস লগ দেখুন",
+        accessLogTitle: "কে আমার রেকর্ড দেখেছে"
     },
     mr: {
         chooseLanguage: "तुमची भाषा निवडा",
@@ -145,7 +185,17 @@ const translations = {
         emergencyInfoTitle: "आणीबाणी माहिती",
         emergencyContactLabel: "आणीबाणी संपर्क",
         loadingMsg: "लोड होत आहे...",
-        notFoundMsg: "कोणतीही नोंद आढळली नाही."
+        notFoundMsg: "कोणतीही नोंद आढळली नाही.",
+        alertSentMsg: "आणीबाणी संपर्काला सूचना पाठवली",
+        viewConsentLogBtn: "संमती नोंद पहा",
+        consentLogTitle: "प्रवेश इतिहास",
+        requestFullHistoryBtn: "संपूर्ण वैद्यकीय इतिहासाची विनंती करा",
+        consentModalTitle: "संपूर्ण वैद्यकीय इतिहासाची विनंती करायची?",
+        consentModalBody: "यामुळे रुग्णाच्या संपूर्ण वैद्यकीय नोंदी आणि कागदपत्रे पाहण्यासाठी संमती मागितली जाईल.",
+        consentCancelBtn: "रद्द करा",
+        consentConfirmBtn: "विनंतीची पुष्टी करा",
+        viewAccessLogBtn: "माझा एक्सेस लॉग पहा",
+        accessLogTitle: "माझी नोंद कोणी पाहिली"
     },
     te: {
         chooseLanguage: "మీ భాషను ఎంచుకోండి",
@@ -174,7 +224,17 @@ const translations = {
         emergencyInfoTitle: "అత్యవసర సమాచారం",
         emergencyContactLabel: "అత్యవసర సంప్రదింపు",
         loadingMsg: "లోడ్ అవుతోంది...",
-        notFoundMsg: "రికార్డ్ కనుగొనబడలేదు."
+        notFoundMsg: "రికార్డ్ కనుగొనబడలేదు.",
+        alertSentMsg: "అత్యవసర సంప్రదింపుకు అలర్ట్ పంపబడింది",
+        viewConsentLogBtn: "సమ్మతి లాగ్ చూడండి",
+        consentLogTitle: "యాక్సెస్ చరిత్ర",
+        requestFullHistoryBtn: "పూర్తి వైద్య చరిత్రను అభ్యర్థించండి",
+        consentModalTitle: "పూర్తి వైద్య చరిత్రను అభ్యర్థించాలా?",
+        consentModalBody: "ఇది రోగి యొక్క పూర్తి వైద్య రికార్డులు మరియు పత్రాలను చూడటానికి సమ్మతిని అభ్యర్థిస్తుంది.",
+        consentCancelBtn: "రద్దు చేయండి",
+        consentConfirmBtn: "అభ్యర్థనను నిర్ధారించండి",
+        viewAccessLogBtn: "నా యాక్సెస్ లాగ్ చూడండి",
+        accessLogTitle: "నా రికార్డును ఎవరు యాక్సెస్ చేశారు"
     },
     gu: {
         chooseLanguage: "તમારી ભાષા પસંદ કરો",
@@ -203,7 +263,17 @@ const translations = {
         emergencyInfoTitle: "ઇમરજન્સી માહિતી",
         emergencyContactLabel: "ઇમરજન્સી સંપર્ક",
         loadingMsg: "લોડ થઈ રહ્યું છે...",
-        notFoundMsg: "કોઈ રેકોર્ડ મળ્યો નથી."
+        notFoundMsg: "કોઈ રેકોર્ડ મળ્યો નથી.",
+        alertSentMsg: "ઇમરજન્સી સંપર્કને ચેતવણી મોકલવામાં આવી",
+        viewConsentLogBtn: "સંમતિ લોગ જુઓ",
+        consentLogTitle: "એક્સેસ ઇતિહાસ",
+        requestFullHistoryBtn: "સંપૂર્ણ મેડિકલ ઇતિહાસની વિનંતી કરો",
+        consentModalTitle: "સંપૂર્ણ મેડિકલ ઇતિહાસની વિનંતી કરવી છે?",
+        consentModalBody: "આ દર્દીની સંપૂર્ણ મેડિકલ નોંધો અને દસ્તાવેજો જોવા માટે સંમતિ માંગશે.",
+        consentCancelBtn: "રદ કરો",
+        consentConfirmBtn: "વિનંતીની પુષ્ટિ કરો",
+        viewAccessLogBtn: "મારો એક્સેસ લોગ જુઓ",
+        accessLogTitle: "મારો રેકોર્ડ કોણે જોયો"
     },
     pa: {
         chooseLanguage: "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
@@ -229,9 +299,19 @@ const translations = {
         documentsLabel: "ਮੈਡੀਕਲ ਦਸਤਾਵੇਜ਼ ਅੱਪਲੋਡ ਕਰੋ",
         saveBtn: "ਸੰਭਾਲੋ",
         qrReadyMsg: "ਤੁਹਾਡਾ QR ਕੋਡ ਤਿਆਰ ਹੈ:",
+        viewAccessLogBtn: "ਮੇਰਾ ਐਕਸੈਸ ਲੌਗ ਵੇਖੋ",
+        accessLogTitle: "ਮੇਰਾ ਰਿਕਾਰਡ ਕਿਸਨੇ ਵੇਖਿਆ",
         emergencyInfoTitle: "ਐਮਰਜੈਂਸੀ ਜਾਣਕਾਰੀ",
         emergencyContactLabel: "ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ",
         loadingMsg: "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
-        notFoundMsg: "ਕੋਈ ਰਿਕਾਰਡ ਨਹੀਂ ਮਿਲਿਆ।"
+        notFoundMsg: "ਕੋਈ ਰਿਕਾਰਡ ਨਹੀਂ ਮਿਲਿਆ।",
+        alertSentMsg: "ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ ਨੂੰ ਚੇਤਾਵਨੀ ਭੇਜੀ ਗਈ",
+        viewConsentLogBtn: "ਸਹਿਮਤੀ ਲੌਗ ਵੇਖੋ",
+        consentLogTitle: "ਪਹੁੰਚ ਇਤਿਹਾਸ",
+        requestFullHistoryBtn: "ਪੂਰਾ ਮੈਡੀਕਲ ਇਤਿਹਾਸ ਮੰਗੋ",
+        consentModalTitle: "ਪੂਰਾ ਮੈਡੀਕਲ ਇਤਿਹਾਸ ਮੰਗਣਾ ਹੈ?",
+        consentModalBody: "ਇਹ ਮਰੀਜ਼ ਦੇ ਪੂਰੇ ਮੈਡੀਕਲ ਰਿਕਾਰਡ ਅਤੇ ਦਸਤਾਵੇਜ਼ ਵੇਖਣ ਲਈ ਸਹਿਮਤੀ ਮੰਗੇਗਾ।",
+        consentCancelBtn: "ਰੱਦ ਕਰੋ",
+        consentConfirmBtn: "ਬੇਨਤੀ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ"
     }
 };
