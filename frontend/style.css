@@ -92,3 +92,92 @@ button#save-profile-btn:hover {
     font-weight: bold;
     margin-top: 16px;
 }
+
+/* ---------- Emergency Info Card (emergency.html) ---------- */
+#emergency-card {
+    padding: 0;
+    overflow: hidden;
+    max-width: 460px;
+}
+
+.emergency-header {
+    background: #dc2626;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 1.5px;
+    padding: 18px 24px;
+    text-align: center;
+}
+
+.emergency-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 24px;
+    border-bottom: 1px solid #eef0f3;
+}
+
+.emergency-row:last-child {
+    border-bottom: none;
+}
+
+.emergency-label {
+    font-weight: bold;
+    color: #555;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.emergency-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #111;
+    text-align: right;
+}
+
+/* Blood group: the single most urgent fact, shown first and biggest */
+.emergency-blood {
+    background: #fef2f2;
+    padding: 22px 24px;
+}
+
+.emergency-blood-value {
+    font-size: 34px;
+    font-weight: 800;
+    color: #dc2626;
+}
+
+/* Allergies: flagged as a warning since it can be life-threatening */
+.emergency-warning {
+    background: #fffbeb;
+}
+
+.emergency-warning-value {
+    color: #b45309;
+    font-weight: 700;
+}
+
+#loading-message, #error-message {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+}
+
+/* ---------- QR code section (index.html profile form) ---------- */
+#qr-section {
+    margin-top: 24px;
+    text-align: center;
+}
+
+#qr-section p {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#qr-canvas {
+    border: 1px solid #d0d5dd;
+    border-radius: 8px;
+    padding: 8px;
+}

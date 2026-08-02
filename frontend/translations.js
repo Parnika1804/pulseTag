@@ -23,7 +23,13 @@ const translations = {
         conditionsPlaceholder: "e.g. Diabetes",
         medicationsLabel: "Medications",
         medicationsPlaceholder: "e.g. Metformin 500mg",
-        saveBtn: "Save"
+        documentsLabel: "Upload Medical Documents",
+        saveBtn: "Save",
+        qrReadyMsg: "Your QR code is ready:",
+        emergencyInfoTitle: "EMERGENCY INFO",
+        emergencyContactLabel: "Emergency Contact",
+        loadingMsg: "Loading...",
+        notFoundMsg: "No record found."
     },
     hi: {
         chooseLanguage: "अपनी भाषा चुनें",
@@ -46,7 +52,13 @@ const translations = {
         conditionsPlaceholder: "जैसे मधुमेह",
         medicationsLabel: "दवाइयाँ",
         medicationsPlaceholder: "जैसे मेटफॉर्मिन 500mg",
-        saveBtn: "सहेजें"
+        documentsLabel: "चिकित्सा दस्तावेज़ अपलोड करें",
+        saveBtn: "सहेजें",
+        qrReadyMsg: "आपका QR कोड तैयार है:",
+        emergencyInfoTitle: "आपातकालीन जानकारी",
+        emergencyContactLabel: "आपातकालीन संपर्क",
+        loadingMsg: "लोड हो रहा है...",
+        notFoundMsg: "कोई रिकॉर्ड नहीं मिला।"
     },
     ta: {
         chooseLanguage: "உங்கள் மொழியைத் தேர்ந்தெடுக்கவும்",
@@ -69,7 +81,13 @@ const translations = {
         conditionsPlaceholder: "எ.கா. நீரிழிவு",
         medicationsLabel: "மருந்துகள்",
         medicationsPlaceholder: "எ.கா. மெட்ஃபார்மின் 500mg",
-        saveBtn: "சேமிக்கவும்"
+        documentsLabel: "மருத்துவ ஆவணங்களைப் பதிவேற்றவும்",
+        saveBtn: "சேமிக்கவும்",
+        qrReadyMsg: "உங்கள் QR குறியீடு தயார்:",
+        emergencyInfoTitle: "அவசர தகவல்",
+        emergencyContactLabel: "அவசர தொடர்பு",
+        loadingMsg: "ஏற்றுகிறது...",
+        notFoundMsg: "பதிவு எதுவும் இல்லை."
     },
     bn: {
         chooseLanguage: "আপনার ভাষা নির্বাচন করুন",
@@ -92,7 +110,13 @@ const translations = {
         conditionsPlaceholder: "যেমন ডায়াবেটিস",
         medicationsLabel: "ওষুধ",
         medicationsPlaceholder: "যেমন মেটফরমিন 500mg",
-        saveBtn: "সংরক্ষণ করুন"
+        documentsLabel: "মেডিকেল ডকুমেন্ট আপলোড করুন",
+        saveBtn: "সংরক্ষণ করুন",
+        qrReadyMsg: "আপনার QR কোড প্রস্তুত:",
+        emergencyInfoTitle: "জরুরি তথ্য",
+        emergencyContactLabel: "জরুরি যোগাযোগ",
+        loadingMsg: "লোড হচ্ছে...",
+        notFoundMsg: "কোনো রেকর্ড পাওয়া যায়নি।"
     },
     mr: {
         chooseLanguage: "तुमची भाषा निवडा",
@@ -115,7 +139,13 @@ const translations = {
         conditionsPlaceholder: "उदा. मधुमेह",
         medicationsLabel: "औषधे",
         medicationsPlaceholder: "उदा. मेटफॉर्मिन 500mg",
-        saveBtn: "जतन करा"
+        documentsLabel: "वैद्यकीय कागदपत्रे अपलोड करा",
+        saveBtn: "जतन करा",
+        qrReadyMsg: "तुमचा QR कोड तयार आहे:",
+        emergencyInfoTitle: "आणीबाणी माहिती",
+        emergencyContactLabel: "आणीबाणी संपर्क",
+        loadingMsg: "लोड होत आहे...",
+        notFoundMsg: "कोणतीही नोंद आढळली नाही."
     },
     te: {
         chooseLanguage: "మీ భాషను ఎంచుకోండి",
@@ -138,7 +168,13 @@ const translations = {
         conditionsPlaceholder: "ఉదా. మధుమేహం",
         medicationsLabel: "మందులు",
         medicationsPlaceholder: "ఉదా. మెట్‌ఫార్మిన్ 500mg",
-        saveBtn: "సేవ్ చేయండి"
+        documentsLabel: "వైద్య పత్రాలను అప్‌లోడ్ చేయండి",
+        saveBtn: "సేవ్ చేయండి",
+        qrReadyMsg: "మీ QR కోడ్ సిద్ధంగా ఉంది:",
+        emergencyInfoTitle: "అత్యవసర సమాచారం",
+        emergencyContactLabel: "అత్యవసర సంప్రదింపు",
+        loadingMsg: "లోడ్ అవుతోంది...",
+        notFoundMsg: "రికార్డ్ కనుగొనబడలేదు."
     },
     gu: {
         chooseLanguage: "તમારી ભાષા પસંદ કરો",
@@ -161,7 +197,13 @@ const translations = {
         conditionsPlaceholder: "દા.ત. ડાયાબિટીસ",
         medicationsLabel: "દવાઓ",
         medicationsPlaceholder: "દા.ત. મેટફોર્મિન 500mg",
-        saveBtn: "સાચવો"
+        documentsLabel: "મેડિકલ દસ્તાવેજો અપલોડ કરો",
+        saveBtn: "સાચવો",
+        qrReadyMsg: "તમારો QR કોડ તૈયાર છે:",
+        emergencyInfoTitle: "ઇમરજન્સી માહિતી",
+        emergencyContactLabel: "ઇમરજન્સી સંપર્ક",
+        loadingMsg: "લોડ થઈ રહ્યું છે...",
+        notFoundMsg: "કોઈ રેકોર્ડ મળ્યો નથી."
     },
     pa: {
         chooseLanguage: "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
@@ -184,6 +226,12 @@ const translations = {
         conditionsPlaceholder: "ਜਿਵੇਂ ਸ਼ੂਗਰ",
         medicationsLabel: "ਦਵਾਈਆਂ",
         medicationsPlaceholder: "ਜਿਵੇਂ ਮੈਟਫਾਰਮਿਨ 500mg",
-        saveBtn: "ਸੰਭਾਲੋ"
+        documentsLabel: "ਮੈਡੀਕਲ ਦਸਤਾਵੇਜ਼ ਅੱਪਲੋਡ ਕਰੋ",
+        saveBtn: "ਸੰਭਾਲੋ",
+        qrReadyMsg: "ਤੁਹਾਡਾ QR ਕੋਡ ਤਿਆਰ ਹੈ:",
+        emergencyInfoTitle: "ਐਮਰਜੈਂਸੀ ਜਾਣਕਾਰੀ",
+        emergencyContactLabel: "ਐਮਰਜੈਂਸੀ ਸੰਪਰਕ",
+        loadingMsg: "ਲੋਡ ਹੋ ਰਿਹਾ ਹੈ...",
+        notFoundMsg: "ਕੋਈ ਰਿਕਾਰਡ ਨਹੀਂ ਮਿਲਿਆ।"
     }
 };

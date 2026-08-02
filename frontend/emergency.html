@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PulseTag - Emergency Info</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Loading state, shown until data arrives from the backend -->
+    <div id="loading-message" class="screen">
+        <p data-i18n="loadingMsg">Loading...</p>
+    </div>
+
+    <!-- Emergency info card, hidden until data loads -->
+    <div id="emergency-card" class="screen hidden">
+        <div class="emergency-header">
+            <span data-i18n="emergencyInfoTitle">EMERGENCY INFO</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="nameLabel">Name</span>
+            <span class="emergency-value" id="ec-name">-</span>
+        </div>
+
+        <div class="emergency-row emergency-blood">
+            <span class="emergency-label" data-i18n="bloodGroupLabel">Blood Group</span>
+            <span class="emergency-value emergency-blood-value" id="ec-blood-group">-</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="allergiesLabel">Allergies</span>
+            <span class="emergency-value" id="ec-allergies">-</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="conditionsLabel">Conditions</span>
+            <span class="emergency-value" id="ec-conditions">-</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="medicationsLabel">Medications</span>
+            <span class="emergency-value" id="ec-medications">-</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="emergencyContactLabel">Emergency Contact</span>
+            <span class="emergency-value" id="ec-contact">-</span>
+        </div>
+    </div>
+
+    <!-- Shown if no id in URL, or backend returns an error / not found -->
+    <div id="error-message" class="screen hidden">
+        <p data-i18n="notFoundMsg">No record found.</p>
+    </div>
+
+    <script src="translations.js"></script>
+    <script src="emergency.js"></script>
+</body>
+</html>

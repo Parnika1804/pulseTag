@@ -71,9 +71,18 @@
         <label for="medications-input" data-i18n="medicationsLabel">Medications</label>
         <input type="text" id="medications-input" data-i18n-placeholder="medicationsPlaceholder" placeholder="e.g. Metformin 500mg">
 
+        <label for="documents-input" data-i18n="documentsLabel">Upload Medical Documents</label>
+        <input type="file" id="documents-input" multiple accept="image/*,.pdf">
+
         <button id="save-profile-btn" data-i18n="saveBtn">Save</button>
+
+        <div id="qr-section" class="hidden">
+            <p data-i18n="qrReadyMsg">Your QR code is ready:</p>
+            <canvas id="qr-canvas"></canvas>
+        </div>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
     <script src="translations.js"></script>
     <script src="script.js"></script>
 </body>

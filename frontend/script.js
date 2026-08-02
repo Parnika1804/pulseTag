@@ -109,19 +109,66 @@ function showProfileForm() {
 // ---------- Step 3: Save profile ----------
 const saveProfileBtn = document.getElementById('save-profile-btn');
 
+const BACKEND_URL = 'http://localhost:8000'; // change this if Person2's backend runs elsewhere
+
+function generateQrCode(userId) {
+    const qrSection = document.getElementById('qr-section');
+    const qrCanvas = document.getElementById('qr-canvas');
+
+    // Change this base URL to wherever emergency.html is actually hosted
+    const emergencyUrl = window.location.origin + '/emergency.html?id=' + userId;
+
+    QRCode.toCanvas(qrCanvas, emergencyUrl, function (err) {
+        if (err) {
+            console.error('Failed to generate QR code:', err);
+            return;
+        }
+        qrSection.classList.remove('hidden');
+        console.log('QR code generated for:', emergencyUrl);
+    });
+}
 if (saveProfileBtn) {
     saveProfileBtn.addEventListener('click', function () {
+        const documentsInput = document.getElementById('documents-input');
+        const selectedFiles = documentsInput.files;
+        const fileNames = Array.from(selectedFiles).map(function (f) { return f.name; });
+
+        console.log('Selected documents:', fileNames);
+        // NOTE: actually uploading these files to the health locker is a later
+        // step — for this demo we're just capturing the file names for now.
+
         const profileData = {
             name: document.getElementById('name-input').value,
-            bloodGroup: document.getElementById('blood-group-input').value,
+            blood_group: document.getElementById('blood-group-input').value,
             allergies: document.getElementById('allergies-input').value,
             conditions: document.getElementById('conditions-input').value,
             medications: document.getElementById('medications-input').value,
             language: currentLang
         };
 
-        console.log('Profile data to send to backend:', profileData);
+        saveProfileBtn.disabled = true;
+        saveProfileBtn.textContent = 'Saving...';
 
-        // NOTE: backend connection (fetch/POST call) happens in Phase 2
+        fetch(BACKEND_URL + '/profile', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(profileData)
+        })
+            .then(function (res) {
+                if (!res.ok) throw new Error('Server responded with an error');
+                return res.json();
+            })
+            .then(function (data) {
+                console.log('Profile saved. Backend response:', data);
+                generateQrCode(data.id);
+            })
+            .catch(function (err) {
+                console.error('Failed to save profile:', err);
+                alert('Could not save profile. Is the backend running?');
+            })
+            .finally(function () {
+                saveProfileBtn.disabled = false;
+                saveProfileBtn.textContent = translations[currentLang].saveBtn;
+            });
     });
 }
