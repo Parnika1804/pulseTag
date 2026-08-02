@@ -19,19 +19,19 @@
             <span data-i18n="emergencyInfoTitle">EMERGENCY INFO</span>
         </div>
 
-        <div class="emergency-row">
-            <span class="emergency-label" data-i18n="nameLabel">Name</span>
-            <span class="emergency-value" id="ec-name">-</span>
-        </div>
-
         <div class="emergency-row emergency-blood">
             <span class="emergency-label" data-i18n="bloodGroupLabel">Blood Group</span>
             <span class="emergency-value emergency-blood-value" id="ec-blood-group">-</span>
         </div>
 
-        <div class="emergency-row">
+        <div class="emergency-row emergency-warning">
             <span class="emergency-label" data-i18n="allergiesLabel">Allergies</span>
-            <span class="emergency-value" id="ec-allergies">-</span>
+            <span class="emergency-value emergency-warning-value" id="ec-allergies">-</span>
+        </div>
+
+        <div class="emergency-row">
+            <span class="emergency-label" data-i18n="nameLabel">Name</span>
+            <span class="emergency-value" id="ec-name">-</span>
         </div>
 
         <div class="emergency-row">
@@ -49,6 +49,41 @@
             <span class="emergency-value" id="ec-contact">-</span>
         </div>
     </div>
+
+    <!-- Shown after data loads, confirming the emergency contact was notified -->
+    <div id="alert-sent-message" class="hidden">
+        <span data-i18n="alertSentMsg">Alert sent to emergency contact</span>
+    </div>
+
+    <!-- Consent log: who accessed this record and when -->
+    <div id="consent-log-section" class="hidden">
+        <button id="view-consent-log-btn" data-i18n="viewConsentLogBtn">View Consent Log</button>
+
+        <div id="consent-log-list" class="hidden">
+            <h3 data-i18n="consentLogTitle">Access History</h3>
+            <div id="consent-log-entries"></div>
+        </div>
+    </div>
+
+    <!-- Request full medical history (separate, explicit consent) -->
+    <div id="full-history-section" class="hidden">
+        <button id="request-full-history-btn" data-i18n="requestFullHistoryBtn">Request Full Medical History</button>
+    </div>
+
+    <!-- Consent confirmation popup -->
+    <div id="consent-modal-overlay" class="hidden">
+        <div id="consent-modal">
+            <h3 data-i18n="consentModalTitle">Request Full Medical History?</h3>
+            <p data-i18n="consentModalBody">This will request the patient's consent to view their complete medical records and documents, beyond the basic emergency info.</p>
+            <div class="consent-modal-buttons">
+                <button id="consent-cancel-btn" data-i18n="consentCancelBtn">Cancel</button>
+                <button id="consent-confirm-btn" data-i18n="consentConfirmBtn">Confirm Request</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result of the full-history request -->
+    <div id="full-history-result" class="hidden"></div>
 
     <!-- Shown if no id in URL, or backend returns an error / not found -->
     <div id="error-message" class="screen hidden">

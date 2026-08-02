@@ -3,6 +3,8 @@ const languageScreen = document.getElementById('language-screen');
 const onboardingScreen = document.getElementById('onboarding-screen');
 const profileForm = document.getElementById('profile-form');
 
+let savedUserId = null; // set after a successful profile save, used by the access log
+
 // ---------- Language state (persisted across the whole site) ----------
 // 'pulsetag_lang' is saved in localStorage so every page on the site
 // can read it and load directly in the user's chosen language.
@@ -127,6 +129,43 @@ function generateQrCode(userId) {
         console.log('QR code generated for:', emergencyUrl);
     });
 }
+// ---------- View My Access Log (patient's own view) ----------
+const viewAccessLogBtn = document.getElementById('view-access-log-btn');
+
+if (viewAccessLogBtn) {
+    viewAccessLogBtn.addEventListener('click', function () {
+        const logList = document.getElementById('access-log-list');
+        const logEntries = document.getElementById('access-log-entries');
+
+        fetch(BACKEND_URL + '/consent-log/' + savedUserId)
+            .then(function (res) {
+                if (!res.ok) throw new Error('Could not load access log');
+                return res.json();
+            })
+            .then(function (entries) {
+                logEntries.innerHTML = '';
+
+                if (!entries || entries.length === 0) {
+                    logEntries.textContent = 'No one has accessed your record yet.';
+                } else {
+                    entries.forEach(function (entry) {
+                        const row = document.createElement('div');
+                        row.className = 'access-log-row';
+                        row.textContent = entry.accessed_by + ' — ' + entry.timestamp;
+                        logEntries.appendChild(row);
+                    });
+                }
+
+                logList.classList.remove('hidden');
+            })
+            .catch(function (err) {
+                console.error('Failed to load access log:', err);
+                logEntries.innerHTML = '';
+                logEntries.textContent = 'Could not load access history.';
+                logList.classList.remove('hidden');
+            });
+    });
+}
 if (saveProfileBtn) {
     saveProfileBtn.addEventListener('click', function () {
         const documentsInput = document.getElementById('documents-input');
@@ -160,7 +199,13 @@ if (saveProfileBtn) {
             })
             .then(function (data) {
                 console.log('Profile saved. Backend response:', data);
+                savedUserId = data.id;
                 generateQrCode(data.id);
+
+                const accessLogSection = document.getElementById('access-log-section');
+                if (accessLogSection) {
+                    accessLogSection.classList.remove('hidden');
+                }
             })
             .catch(function (err) {
                 console.error('Failed to save profile:', err);
